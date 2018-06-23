@@ -1,0 +1,13 @@
+{
+  "name": "wsgiapp",
+  "description": "wsgi app function",
+  "memory": 128,
+  "timeout": 5,
+  "runtime": "python3.6",
+  "handler": "main.lambda_handler",
+  "role": "arn:aws:iam::851669633371:role/wsgiapp_lambda_function",
+  "environment": {},
+  "hooks": {
+    "build": "cp -r ../../src/* . && pip -r ../../requirements.txt -t ./vendor"
+  }
+}
