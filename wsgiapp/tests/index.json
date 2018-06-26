@@ -1,0 +1,9 @@
+{
+  "httpMethod": "GET",
+  "path": "/",
+  "queryStringParameters": "",
+  "headers": {
+    "HOST": "example.com",
+    "X-FORWARDED-PROTO": "HTTPS"
+  }
+}

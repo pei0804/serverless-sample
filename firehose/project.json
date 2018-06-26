@@ -1,0 +1,13 @@
+{
+  "name": "firehose",
+  "description": "",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::851669633371:role/firehose_lambda_function",
+  "environment": {},
+  "runtime": "python3.6",
+  "handler": "main.lambda_handler",
+  "hooks": {
+    "build": "pip install -r ../../requirements.txt -t ./vendor"
+  }
+}

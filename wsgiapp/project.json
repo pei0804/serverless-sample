@@ -1,13 +1,13 @@
 {
-  "name": "wsgiapp",
-  "description": "wsgi app function",
+  "name": "serverless_wsgi",
+  "description": "serverless wsgi",
   "memory": 128,
   "timeout": 5,
+  "role": "arn:aws:iam::851669633371:role/serverless_wsgi_lambda_function",
+  "environment": {},
   "runtime": "python3.6",
   "handler": "main.lambda_handler",
-  "role": "arn:aws:iam::851669633371:role/wsgiapp_lambda_function",
-  "environment": {},
   "hooks": {
-    "build": "cp -r ../../src/* . && pip -r ../../requirements.txt -t ./vendor"
+    "build": "cp -r ../../src/* . && pip install -r ../../requirements.txt -t ./vendor"
   }
 }
